@@ -1,13 +1,12 @@
 /* eslint-disable react/prop-types */
 import { PlusOutlined } from '@ant-design/icons'
 import { Button, Form, Input, InputNumber, message, Select, Upload } from 'antd'
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { getAuthors, getCategories, getPublishers } from '../api'
 import axiosInstance from '../utils/axiosinstance'
 import CategoryModal from './UI/Modal'
 
-const BASE_URL = import.meta.env.VITE_BASE_URL
+// const BASE_URL = import.meta.env.VITE_BASE_URL
 const { TextArea } = Input
 
 const AddProducts = ({ data, type, handleOk }) => {
@@ -107,7 +106,7 @@ const AddProducts = ({ data, type, handleOk }) => {
       console.log(values)
 
       // Make API call to your backend
-      const response = await axios.post(`${BASE_URL}/books/create`, productData)
+      const response = await axiosInstance.post(`/books/create`, productData)
       if (response.data.success) {
         message.success('Product added successfully!')
         form.resetFields()

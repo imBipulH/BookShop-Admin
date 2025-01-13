@@ -7,7 +7,7 @@ import {
   PlusOutlined
 } from '@ant-design/icons'
 import moment from 'moment'
-import CategoryModal from './UI/Modal'
+import CategoryModal from '../components/UI/Modal'
 const { confirm } = Modal
 
 const { Search } = Input

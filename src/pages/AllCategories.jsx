@@ -7,7 +7,7 @@ import { Button, Divider, Input, Modal, Space, Table } from 'antd'
 import { useEffect, useRef, useState } from 'react'
 import Highlighter from 'react-highlight-words'
 import { getCategories } from '../api'
-import AddCategory from './AddCategory'
+import AddCategory from '../components/AddCategory'
 import axiosInstance from '../utils/axiosinstance'
 const { confirm } = Modal
 

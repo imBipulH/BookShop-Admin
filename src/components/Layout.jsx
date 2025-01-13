@@ -10,9 +10,10 @@ import { Breadcrumb, Layout, Menu, theme } from 'antd'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router'
 import AddProducts from './AddProducts'
 import Dashboard from './Dashboard'
-import BooksTable from './AllProducts'
+import BooksTable from '../pages/AllProducts'
 import AddCategory from './AddCategory'
-import AllCategories from './AllCategories'
+import AllCategories from '../pages/AllCategories'
+import AddBanner from './AddBanner'
 
 const { Header, Content, Footer, Sider } = Layout
 
@@ -123,6 +124,7 @@ const MainLayout = () => {
                 <Route path='/all-products' element={<BooksTable />} />
                 <Route path='/add-product' element={<AddProducts />} />
                 <Route path='/add-category' element={<AddCategory />} />
+                <Route path='/add-banner' element={<AddBanner />} />
                 <Route path='/all-categories' element={<AllCategories />} />
               </Routes>
             </div>
